@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { useState } from "react";
-import { FaSearch } from "react-icons/fa";
+import { FaArrowDown, FaArrowRight, FaSearch } from "react-icons/fa";
 
 const Navbar = () => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
@@ -31,25 +31,33 @@ const Navbar = () => {
                   Backend
                 </Link>
               </li>
-              <li>
-                <Link onClick={() => setDropdownOpen(!dropdownOpen)} className="hover:underline " href={"/"}>
-                  lainya
+              <li className="relative">
+                <Link
+                  onClick={() => setDropdownOpen(!dropdownOpen)}
+                  className="hover:underline flex items-center"
+                  href={"/"}>
+                  lainya{" "}
+                  {dropdownOpen ? (
+                    <FaArrowRight className="w-3 ml-2 " />
+                  ) : (
+                    <FaArrowDown className="w-3 ml-2 " />
+                  )}
                 </Link>
                 <ul className="absolute mt-4 shadow-md w-[200px] bg-gray-800 rounded-md">
                   {dropdownOpen && (
                     <li>
                       <Link
-                        className="px-4 py-3 flex border-b border-white/5 hover:underline hover:text-gray-400"
+                        className="px-4 py-3 flex hover:bg-gray-400 border-b rounded-md border-white/5 hover:underline hover:text-gray-800 transition duration-300"
                         href={"/"}>
                         Internet
                       </Link>
                       <Link
-                        className="px-4 py-3 flex border-b border-white/5 hover:underline hover:text-gray-400"
+                        className="px-4 py-3 flex hover:bg-gray-400 border-b rounded-md border-white/5 hover:underline hover:text-gray-800 transition duration-300"
                         href={"/"}>
                         Books
                       </Link>
                       <Link
-                        className="px-4 py-3 flex border-b border-white/5 hover:underline hover:text-gray-400"
+                        className="px-4 py-3 flex hover:bg-gray-400 border-b rounded-md border-white/5 hover:underline hover:text-gray-800 transition duration-300"
                         href={"/"}>
                         Open Source
                       </Link>
