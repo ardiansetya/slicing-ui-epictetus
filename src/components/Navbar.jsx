@@ -4,6 +4,21 @@ import { FaArrowDown, FaArrowRight, FaSearch } from "react-icons/fa";
 
 const Navbar = () => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
+
+  const dropDownList = [
+    {
+      href: "/internet",
+      title: "Internet",
+    },
+    {
+      href: "/books",
+      title: "Books",
+    },
+    {
+      href: "/open-source",
+      title: "Open Source",
+    },
+  ];
   return (
     <div className="container mx-auto text-white">
       <nav className=" py-10">
@@ -38,32 +53,24 @@ const Navbar = () => {
                   href={"/"}>
                   lainya{" "}
                   {dropdownOpen ? (
-                    <FaArrowRight className="w-3 ml-2 " />
-                  ) : (
                     <FaArrowDown className="w-3 ml-2 " />
+                  ) : (
+                    <FaArrowRight className="w-3 ml-2 " />
                   )}
                 </Link>
-                <ul className="absolute mt-4 shadow-md w-[200px] bg-gray-800 rounded-md">
-                  {dropdownOpen && (
-                    <li>
+                {dropdownOpen && (
+                  <ul className="absolute mt-4 shadow-md w-[200px] bg-gray-800 rounded-md">
+                    {dropDownList.map(({href, title}) => (
+                        
                       <Link
+                      key={title}
                         className="px-4 py-3 flex hover:bg-gray-400 border-b rounded-md border-white/5 hover:underline hover:text-gray-800 transition duration-300"
-                        href={"/"}>
-                        Internet
+                        href={href}>
+                        {title}
                       </Link>
-                      <Link
-                        className="px-4 py-3 flex hover:bg-gray-400 border-b rounded-md border-white/5 hover:underline hover:text-gray-800 transition duration-300"
-                        href={"/"}>
-                        Books
-                      </Link>
-                      <Link
-                        className="px-4 py-3 flex hover:bg-gray-400 border-b rounded-md border-white/5 hover:underline hover:text-gray-800 transition duration-300"
-                        href={"/"}>
-                        Open Source
-                      </Link>
-                    </li>
-                  )}
-                </ul>
+                    ))}
+                  </ul>
+                )}
               </li>
             </ul>
           </div>
