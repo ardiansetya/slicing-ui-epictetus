@@ -20,7 +20,7 @@ const Navbar = () => {
     },
   ];
   return (
-    <div className="container mx-auto text-white">
+
       <nav className=" py-10">
         <div className="flex items-center ">
           <div className="w-2/12 flex items-center  gap-4">
@@ -84,7 +84,7 @@ const Navbar = () => {
           </div>
         </div>
       </nav>
-    </div>
+
   );
 };
 

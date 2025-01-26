@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { Geist, Geist_Mono } from "next/font/google";
 import Navbar from "@/components/Navbar";
+import FeaturedPost from "@/components/FeaturedPost";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -15,7 +16,10 @@ const geistMono = Geist_Mono({
 export default function Home() {
   return (
     <div className="bg-gradient-to-b from-gray-600 to-gray-800 min-h-screen">
-     <Navbar/>
+    <div className="container text-white">
+        <Navbar />
+        <FeaturedPost />
+    </div>
     </div>
   );
 }
