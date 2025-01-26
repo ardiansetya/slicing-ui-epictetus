@@ -29,7 +29,7 @@ const Navbar = () => {
             </div>
             Epictetus
           </div>
-          <div className="w-8/12">
+          <div className="w-7/12">
             <ul className=" flex gap-14">
               <li>
                 <Link className="hover:underline" href={"/"}>
@@ -74,7 +74,7 @@ const Navbar = () => {
               </li>
             </ul>
           </div>
-          <div className="w-2/12 relative">
+          <div className="w-3/12 relative">
             <FaSearch className="absolute top-4 left-5 text-gray-400/20" />
             <input
               type="text"
