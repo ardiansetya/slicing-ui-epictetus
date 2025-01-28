@@ -4,6 +4,7 @@ import Navbar from "@/components/Navbar";
 import FeaturedPost from "@/components/FeaturedPost";
 import CardPost from "@/components/CardPost";
 import { useState } from "react";
+import Footer from "@/components/Footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -105,6 +106,7 @@ export default function Home() {
           ))}
 
         </div>
+          <Footer/>
       </div>
     </div>
   );
