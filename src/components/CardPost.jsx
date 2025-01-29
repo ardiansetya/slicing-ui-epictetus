@@ -6,7 +6,6 @@ const CardPost = ({ thumbnail, ...infoPost }) => {
     <article>
       <img src={thumbnail} alt="" />
       <div className='mt-3'>
-
       <InfoPost {...infoPost} />
       </div>
     </article>
