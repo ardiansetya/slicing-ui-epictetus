@@ -21,7 +21,7 @@ const Navbar = () => {
   ];
   return (
 
-      <nav className=" py-10">
+      <nav className=" py-10 container">
         <div className="flex items-center ">
           <div className="w-2/12 flex items-center  gap-4">
             <div className=" flex justify-center items-center bg-gray-500 rounded-lg size-10">

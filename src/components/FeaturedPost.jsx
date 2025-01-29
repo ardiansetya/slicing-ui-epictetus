@@ -4,8 +4,8 @@ import InfoPost from "./InfoPost";
 const FeaturedPost = () => {
   return (
     <article>
-      <div className="flex gap-8">
-        <div className="w-8/12 ">
+      <div className="flex flex-wrap items-center gap-8">
+        <div className="lg:w-8/12 md:7/12 w-full">
           <img
             className="rounded-xl"
             src="/featured-thumbnail.png"
@@ -13,7 +13,7 @@ const FeaturedPost = () => {
           />
         </div>
 
-        <div className="w-4/12 flex flex-col justify-center">
+        <div className="lg:w-4/12 md:w-5/12 w-full flex flex-col justify-center">
           <InfoPost
             category="UI Design"
             date="July, 2 2021"
