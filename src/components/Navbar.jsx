@@ -28,22 +28,25 @@ const Navbar = () => {
             <FaAlignJustify />
           </button>
         </div>
-        <div className="lg:w-2/12 flex items-center lg:justify-start justify-center gap-4">
+        <div className="lg:w-2/12 w-5/12 flex items-center lg:justify-start justify-center gap-4">
           <div className=" flex justify-center items-center bg-gray-500 rounded-lg size-10">
             E
           </div>
           Epictetus
         </div>
+        <div className="w-4/12 lg:hidden text-end">
+          <FaSearch className="inline-block text-gray-400 " />
+        </div>
         <div
           className={`lg:w-7/12 w-full bg-gradient-to-b from-gray-600 to bg-gray-900 fixed h-full top-0 p-10 ${
-            offCanvas ? "left-0":"-left-full" 
+            offCanvas ? "left-0" : "-left-full"
           }`}>
           <div className="absolute top-10 right-10">
             <button onClick={() => setOffCanvas(false)} className="text-2xl">
               X
             </button>
           </div>
-          <ul className=" flex lg:gap-14 lg:items-center flex-col space-y-4">
+          <ul className=" flex lg:gap-14 lg:items-center flex-col space-y-4 ">
             <li>
               <Link className="hover:underline" href={"/"}>
                 UI Design
@@ -86,7 +89,7 @@ const Navbar = () => {
             </li>
           </ul>
         </div>
-        <div className="lg:w-3/12 relative ">
+        <div className="lg:w-3/12 relative hidden lg:block">
           <FaSearch className="absolute top-4 left-5 text-gray-400/20" />
           <input
             type="text"
