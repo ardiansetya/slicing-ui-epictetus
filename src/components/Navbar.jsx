@@ -38,15 +38,15 @@ const Navbar = () => {
           <FaSearch className="inline-block text-gray-400 " />
         </div>
         <div
-          className={`lg:w-7/12 w-full bg-gradient-to-b from-gray-600 to bg-gray-900 fixed h-full top-0 p-10 ${
+          className={`lg:w-7/12 w-full bg-gradient-to-b from-gray-600 to bg-gray-900 lg:bg-inherit lg:p-0 lg: lg:static lg:flex fixed h-full top-0 p-10 ${
             offCanvas ? "left-0" : "-left-full"
           }`}>
-          <div className="absolute top-10 right-10">
+          <div className="absolute top-10 right-10 lg:hidden">
             <button onClick={() => setOffCanvas(false)} className="text-2xl">
               X
             </button>
           </div>
-          <ul className=" flex lg:gap-14 lg:items-center flex-col space-y-4 ">
+          <ul className=" flex lg:gap-14 lg:items-center flex-col lg:flex-row space-y-4 lg:space-y-0 ">
             <li>
               <Link className="hover:underline" href={"/"}>
                 UI Design
