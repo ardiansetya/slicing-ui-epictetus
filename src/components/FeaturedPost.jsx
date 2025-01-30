@@ -28,6 +28,7 @@ const FeaturedPost = () => {
           />
         </div>
       </div>
+      <hr className="border-white/10 mt-10" />
     </article>
   );
 };
